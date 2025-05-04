@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Quiz - NextStep</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="quiz-header">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">🎓</span>
+                <span class="logo-text">NexteStep</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="quiz.html" class="active">Career quiz</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="tours.html">Virtual tours</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="parent-portal.html">Parents</a></li>
+            </ul>
+            <div class="auth-buttons">
+                
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        
+        <div class="quiz-hero">
+            <h1>Advanced career assessment</h1>
+            <p>Our comprehensive 30-question quiz will help match you with ideal university programs based on your skills, interests, and personality.</p>
+        </div>
+    </header>
+
+    <main class="quiz-container">
+        <div class="quiz-intro" id="quizIntro">
+            <div class="intro-content">
+                <h2>Discover your academic pathway.</h2>
+                <p>This scientifically-validated assessment evaluates your:</p>
+                <ul class="assessment-features">
+                    <li><i class="fas fa-check"></i> Academic strengths</li>
+                    <li><i class="fas fa-check"></i> Work style preferences</li>
+                    <li><i class="fas fa-check"></i> Personality traits</li>
+                    <li><i class="fas fa-check"></i> Career aspirations</li>
+                </ul>
+                <div class="quiz-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-text">10-15 minutes</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">❓</div>
+                        <div class="stat-text">30 questions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-text">Personalized results</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="startQuiz">Begin assessment</button>
+            </div>
+            <div class="intro-image">
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Career Assessment">
+                <div class="sponsor-badge">
+                    <span>Supported by Tirana Business University</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-progress" id="quizProgress" style="display: none;">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text">
+                    Question <span id="currentQuestion">1</span> of <span id="totalQuestions">30</span>
+                </div>
+            </div>
+            <div class="time-estimate">
+                <i class="fas fa-clock"></i> <span id="timeRemaining">About 10 minutes remaining</span>
+            </div>
+        </div>
+
+        <div class="quiz-questions" id="quizQuestions" style="display: none;">
+          
+        </div>
+
+        <div class="quiz-results" id="quizResults" style="display: none;">
+            <div class="results-header">
+                <h2>Your Personalized Career Report</h2>
+                <p>Based on your answers, here are your top matches among Albanian and international universities.</p>
+                <div class="results-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i> <span id="resultUserName">User</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i> <span id="resultDate">Today</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results-content" id="resultsContent">
+           
+            </div>
+            
+            <div class="results-actions">
+                <button class="btn btn-primary" onclick="saveResults()">
+                    <i class="fas fa-save"></i> Save to Dashboard
+                </button>
+                <button class="btn btn-secondary" onclick="window.print()">
+                    <i class="fas fa-print"></i> Print Report
+                </button>
+                <button class="btn btn-tertiary" onclick="location.href='programs.html'">
+                    <i class="fas fa-search"></i> Explore Programs
+                </button>
+            </div>
+            
+            <div class="sponsor-message">
+                <h3>Special opportunity from our sponsor</h3>
+                <div class="sponsor-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS00X_5kQ54ZVcqzwaQ015SqCGxdT_dz3X25A&s" alt="Tirana Business University">
+                    <div class="sponsor-info">
+                        <h4>Tirana Business University</h4>
+                        <p>Based on your results, TBU offers excellent programs matching your profile. Enjoy a 15% application fee waiver with your quiz results!</p>
+                        <a href="https://tbu.edu.al" target="_blank" class="btn btn-sponsor">Visit TBU Website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+ 
+    </footer>
+
+    <script src="quiz.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Programs - NextStep</title>
+    <meta name="description" content="Explore undergraduate programs offered by universities in Albania">
+    <link rel="stylesheet" href="programs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="programs-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="logo">
+                <span class="logo-icon" aria-hidden="true">🎓</span>
+                <span class="logo-text">NextStep</span>
+            </div>
+            
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Career quiz</a></li>
+                <li><a href="programs.html" class="active" aria-current="page">Programs</a></li>
+                <li><a href="tours.html">Virtual tours</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="parent-portal.html">Parents</a></li>
+            </ul>
+            
+            <div class="auth-buttons">
+                <button class="btn btn-login" aria-label="Login">Login</button>
+                <button class="btn btn-signup" aria-label="Sign Up">Sign Up</button>
+            </div>
+        </nav>
+        
+        <div class="programs-hero">
+            <h1>Explore university programs</h1>
+            <p>Discover undergraduate programs offered by universities in Albania.</p>
+        </div>
+    </header>
+
+    <main class="programs-main">
+        <section class="filter-section" aria-labelledby="filterHeading">
+            <h2 id="filterHeading" class="visually-hidden">Program filters</h2>
+            
+            <div class="search-box">
+                <label for="programSearch" class="visually-hidden">Search programs</label>
+                <input type="text" id="programSearch" placeholder="Search programs..." aria-label="Search programs">
+                <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="fieldFilter">Field of Study</label>
+                    <select id="fieldFilter" aria-label="Filter by field of study">
+                        <option value="">All Fields</option>
+                        <option value="business">Business & Economics</option>
+                        <option value="engineering">Engineering & Technology</option>
+                        <option value="arts">Arts & Humanities</option>
+                        <option value="science">Natural Sciences</option>
+                        <option value="social">Social Sciences</option>
+                        <option value="health">Health Sciences</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="universityFilter">University</label>
+                    <select id="universityFilter" aria-label="Filter by university">
+                        <option value="">All Universities</option>
+                        <option value="Tirana University">Tirana University</option>
+                        <option value="EPOKA University">EPOKA University</option>
+                        <option value="Tirana Business University">Tirana Business University</option>
+                        <option value="POLIS University">POLIS University</option>
+                        <option value="MARUBI Academy">MARUBI Academy</option>
+                        <option value="BEDER University">BEDER University</option>
+                        <option value="European University of Tirana">European University of Tirana</option>
+                        <option value="University of Economics Tirana">University of Economics Tirana</option>
+                        <option value="Aleksander Xhuvani University">Aleksander Xhuvani University</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="durationFilter">Duration</label>
+                    <select id="durationFilter" aria-label="Filter by duration">
+                        <option value="">Any Duration</option>
+                        <option value="3">3 Years</option>
+                        <option value="4">4 Years</option>
+                        <option value="5">5 Years</option>
+                        <option value="6">6 Years</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-secondary" id="resetFilters" aria-label="Reset all filters">Reset Filters</button>
+            </div>
+        </section>
+        
+        <section class="programs-results" aria-labelledby="resultsHeading">
+            <h2 id="resultsHeading" class="visually-hidden">Program Results</h2>
+            <div class="programs-container" id="programsContainer" role="list">
+            </div>
+            
+            <div id="loadingIndicator" class="loading-indicator" aria-live="polite" aria-busy="true" hidden>
+                <div class="spinner"></div>
+                <p>Loading programs...</p>
+            </div>
+            
+            <div id="noResults" class="no-results" aria-live="polite" hidden>
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="" aria-hidden="true">
+                <h3>No programs match your search</h3>
+                <p>Try adjusting your filters or search for something different</p>
+                <button class="btn btn-primary" id="resetFiltersBtn">Reset Filters</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" aria-labelledby="footerHeading">
+        <div class="container">
+            <h2 id="footerHeading" class="visually-hidden">Footer</h2>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>UniExplora</h3>
+                    <p>Helping students find their perfect university program in Albania.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="quiz.html">Career Quiz</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 UniExplora. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <div id="loginModal" class="modal" aria-hidden="true" role="dialog" hidden>
+    </div>
+    
+    <div id="signupModal" class="modal" aria-hidden="true" role="dialog" hidden>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="programs.js"></script>
+</body>
+</html>

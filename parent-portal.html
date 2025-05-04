@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Portal - NextStep</title>
+    <link rel="stylesheet" href="parent-portal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="parent-header">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">🎓</span>
+                <span class="logo-text">NextStep</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Career quiz</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="tours.html">Virtual tours</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="parent-portal.html" class="active">Parents</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn btn-login">Login</button>
+                <button class="btn btn-signup">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        
+        <div class="parent-hero">
+            <h1>Parent resources</h1>
+            <p>Supporting your child's academic journey with expert guidance and resources.</p>
+        </div>
+    </header>
+
+    <main class="parent-main">
+        <section class="parent-section resources-section">
+            <h2>Helpful resources</h2>
+            <p class="section-description">Access articles, guides, and tools to help you navigate the university selection process.</p>
+            
+            <div class="resources-grid" id="resourcesGrid">
+            
+            </div>
+        </section>
+        
+        <section class="parent-section faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <p class="section-description">Find answers to common questions parents have about university admissions in Albania.</p>
+            
+            <div class="faq-accordion" id="faqAccordion">
+            
+            </div>
+        </section>
+        
+        <section class="parent-section advisor-section">
+            <div class="advisor-content">
+                <div class="advisor-text">
+                    <h2>Need Personalized Advice?</h2>
+                    <p>Schedule a consultation with our education advisors to discuss your child's academic future and get tailored recommendations.</p>
+                    <button class="btn btn-primary">Book an appointment</button>
+                </div>
+                <div class="advisor-image">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Education Advisor">
+                </div>
+            </div>
+        </section>
+        
+        <section class="parent-section newsletter-section">
+            <h2>Stay informed</h2>
+            <p class="section-description">Subscribe to our parent newsletter for monthly updates on university admissions, events, and tips.</p>
+            
+            <form class="newsletter-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Select your child's grade</option>
+                       
+                        <option value="10">Grade 10</option>
+                        <option value="11">Grade 11</option>
+                        <option value="12">Grade 12</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+    </footer>
+    <script src="parent-portal.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Tours - NextStep</title>
+    <link rel="stylesheet" href="tours.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="tours-header">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">🎓</span>
+                <span class="logo-text">NextStep</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Career quiz</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="tours.html" class="active">Virtual tours</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="parent-portal.html">Parents</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn btn-login">Login</button>
+                <button class="btn btn-signup">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        <div class="tours-hero">
+            <h1>Explore campuses virtually.</h1>
+            <p>Take 360° virtual tours of Albanian universities and experience campus life from anywhere.</p>
+        </div>
+    </header>
+    <main class="tours-main">
+        <div class="tours-filter">
+            <div class="filter-group">
+                <label for="universityTourFilter">University</label>
+                <select id="universityTourFilter">
+                    <option value="">All Universities</option>
+                    <option value="epoka">EPOKA University</option>
+                    <option value="uet">UET</option>
+                    <option value="polis">POLIS University</option>
+                    <option value="eu">European University</option>
+                    <option value="beder">BEDER University</option>
+                    <option value="marubi">MARUBI Academy</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="tourTypeFilter">Tour type</label>
+                <select id="tourTypeFilter">
+                    <option value="">All types</option>
+                    <option value="campus">Campus tour</option>
+                    <option value="facilities">Facilities</option>
+                    <option value="dormitories">Dormitories</option>
+                    <option value="library">Library</option>
+                </select>
+            </div>
+        </div>
+        <div class="tours-container" id="toursContainer">
+        </div>
+        <div class="student-testimonials">
+            <h2>Student Experiences</h2>
+            <p>Hear directly from current students about their university life.</p>
+            <div class="testimonials-grid" id="testimonialsGrid">
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+    </footer> 
+    <script src="tours.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

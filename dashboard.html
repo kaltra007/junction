@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - NextStep</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">🎓</span>
+                <span class="logo-text">NextStep</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Career quiz</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="tours.html">Virtual tours</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="parent-portal.html">Parents</a></li>
+            </ul>
+            <div class="auth-buttons">
+                
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        
+        <div class="dashboard-hero">
+            <div class="profile-header">
+                <div class="profile-image">
+                    <img id="profileImage" src="https://ui-avatars.com/api/?name=U&background=4a6bff&color=fff" alt="Profile">
+                </div>
+                <div class="profile-info">
+                    <h1>Welcome back, <span id="studentName">User</span>!</h1>
+                    <p id="dashboardSubtitle">Here's your personalized dashboard with your saved programs, upcoming events, and more.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="dashboard-grid">
+            <div class="dashboard-col main-col">
+                <section class="dashboard-section saved-programs">
+                    <div class="section-header">
+                        <h2><i class="fas fa-bookmark"></i> Saved programs</h2>
+                        <a href="programs.html" class="view-all">View All</a>
+                    </div>
+                    <div class="programs-list" id="savedPrograms">
+                        
+                        <div class="no-programs">
+                            <p>You haven't saved any programs yet.</p>
+                            <button class="btn btn-primary" onclick="location.href='programs.html'">Browse programs</button>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="dashboard-section quiz-results">
+                    <div class="section-header">
+                        <h2><i class="fas fa-poll"></i> Your quiz results</h2>
+                    </div>
+                    <div class="results-summary" id="quizResultsContainer">
+                        <div class="no-results">
+                            <p>You haven't taken the career quiz yet.</p>
+                            <button class="btn btn-primary" onclick="location.href='quiz.html'">Take quiz now.</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="dashboard-col sidebar-col">
+                <section class="dashboard-section upcoming-events">
+                    <div class="section-header">
+                        <h2><i class="fas fa-calendar-alt"></i> Upcoming events</h2>
+                        <a href="#" class="view-all">View calendar</a>
+                    </div>
+                    <div class="events-list" id="upcomingEvents">
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">15</span>
+                                <span class="month">Oct</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>EPOKA Open Day</h4>
+                                <p>Campus tour and program presentations.</p>
+                                <p><i class="fas fa-clock"></i> 10:00 AM</p>
+                                <div class="event-actions">
+                                    <button class="btn btn-primary">Register</button>
+                                    <button class="btn btn-secondary">Add to calendar</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+                
+                <section class="dashboard-section student-chat">
+                    <div class="section-header">
+                        <h2><i class="fas fa-comments"></i> Chat with Students</h2>
+                    </div>
+                    <div class="chat-preview">
+                        <div class="chat-item">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student">
+                            <div class="chat-info">
+                                <h4>Endrit - Computer Science</h4>
+                                <p>Hi there! I'd be happy to answer any questions about EPOKA...</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Student">
+                            <div class="chat-info">
+                                <h4>Era - Architecture</h4>
+                                <p>The design studios at POLIS are amazing. When would you like...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary" id="startNewChat">Start New Chat</button>
+                    </div>
+                </section>
+                
+                <section class="dashboard-section quick-actions">
+                    <div class="section-header">
+                        <h2><i class="fas fa-bolt"></i> Quick Actions</h2>
+                    </div>
+                    <div class="actions-grid">
+                        <button class="action-btn" onclick="location.href='tours.html'">
+                            <i class="fas fa-vr-cardboard"></i>
+                            <span>Virtual Tours</span>
+                        </button>
+                        <button class="action-btn" onclick="location.href='parent-portal.html'">
+                            <i class="fas fa-user-friends"></i>
+                            <span>Parent Portal</span>
+                        </button>
+                        <button class="action-btn" onclick="location.href='programs.html'">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Application Tips</span>
+                        </button>
+                        <button class="action-btn" onclick="location.href='faq.html'">
+                            <i class="fas fa-question-circle"></i>
+                            <span>FAQ</span>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+     
+    </footer>
+
+    <script src="dashboard.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
